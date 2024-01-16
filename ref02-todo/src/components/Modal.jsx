@@ -1,14 +1,20 @@
-import classes from './Modal.module.css';
+function Modal(props) {
 
-function Modal({ children, onClose }) {
+  function cancelHandler() {
+    props.onCancel()
+  }
+  
+  function confirmHandler() {
+    props.onConfirm()
+  }
+
   return (
-    <>
-      <div className={classes.backdrop} onClick={onClose} />
-      <dialog open className={classes.modal}>
-        {children}
-      </dialog>
-    </>
+    <div className='modal'>
+      <p>Are you sure?</p>
+      <button className='btn btn-alt' onClick={cancelHandler}>Cancel</button>
+      <button className='btn' onClick={confirmHandler}>Confirm</button>
+    </div>
   );
 }
 
-export default Modal
+export default Modal;
