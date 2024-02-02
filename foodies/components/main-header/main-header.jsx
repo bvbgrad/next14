@@ -7,8 +7,7 @@ import MainHeaderBackground from './main-header-background';
 import NavLink from './nav-link';
 
 function MainHeader() {
-
-  console.log("classes.header: ", classes.header)
+  console.log('classes.header: ', classes.header);
   return (
     <>
       <MainHeaderBackground />
@@ -21,10 +20,10 @@ function MainHeader() {
         <nav className={classes.nav}>
           <ul>
             <li>
-              <NavLink href="/meals">Browse Meals</NavLink>
+              <NavLink href='/meals'>Browse Meals</NavLink>
             </li>
             <li>
-              <NavLink href="/community">Foodies Community</NavLink>
+              <NavLink href='/community'>Foodies Community</NavLink>
             </li>
           </ul>
         </nav>

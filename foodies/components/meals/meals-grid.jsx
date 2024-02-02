@@ -1,16 +1,15 @@
-import classes from './meals-grid.module.css'
+import classes from './meals-grid.module.css';
+import MealItem from './meal-item';
 
-export default function MealsGrid(meals) {
+export default function MealsGrid({ meals }) {
+  console.log('MealsGrid meals qty: ', meals.length);
   return (
-    <>
-      <div>MealsGrid</div>
-      <ul className={meals}>
-        {meals.map((meal) => {
+      <ul className={classes.meals}>
+        {meals.map((meal) => (
           <li key={meal.id}>
             <MealItem {...meal} />
-          </li>;
-        })}
+          </li>
+        ))}
       </ul>
-    </>
   );
 }

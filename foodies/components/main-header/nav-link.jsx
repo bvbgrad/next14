@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 import classes from './nav-link.module.css';
 
 // export default function NavLink({href, children}) {
-export default function NavLink({href, children}) {
+export default function NavLink({ href, children }) {
   const path = usePathname();
 
   return (
@@ -13,8 +13,8 @@ export default function NavLink({href, children}) {
       href={href}
       className={
         path.startsWith(href)
-        ? `${classes.link} ${classes.active}`
-        : classes.link
+          ? `${classes.link} ${classes.active}`
+          : classes.link
       }
     >
       {children}
